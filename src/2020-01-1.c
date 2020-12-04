@@ -3,6 +3,66 @@
     #include <errno.h>
 
 
+int findProduct2(char array[200][6])
+{
+
+    for(int index =0; index < 200; index++)
+    {
+        for(int index2 =0; index2 <200; index2 ++)
+        {
+            if((atoi(array[index]) + atoi(array[index2])) == 2020)
+            {
+                return ( atoi(array[index]) * atoi(array[index2]) );
+            }
+
+        }
+
+    }
+
+}
+
+int findProduct3(char array[200][6])
+{
+
+    for(int index =0; index < 200; index++)
+    {
+        for(int index2 =0; index2 <200; index2 ++)
+        {
+            for(int index3 =0; index3 <200; index3 ++)
+            {
+                if((atoi(array[index]) + atoi(array[index2]) + atoi(array[index3]) ) == 2020)
+                {
+                    return ( atoi(array[index]) * atoi(array[index2]) * atoi(array[index3]) );
+
+                }
+
+            }
+
+        }
+
+    }
+}
+
+
+    int findProduct2Fail(FILE *fp){ //doesn't work. first fgets will take the first nr, second will go 2nd nr to last nr
+        // and then exit both while loops
+        char str[6];
+        char str2[6];
+
+        while(fgets(str,6,fp) != NULL){
+            while(fgets(str2,6,fp) != NULL){
+                if( (atoi(str) + atoi(str2)) == 2020 ){
+                    return (atoi(str) * atoi(str2));
+                }
+
+            }
+
+        }
+
+    return 0;
+    }
+
+
     int main(){
     char str[6]; //maximum 4 numbers + the NULL character "\0"
     int counter =0;
@@ -43,7 +103,7 @@
         printf("\n");
       printf(" THis is the number Im after: %s\n",array[199]);
 
-
+/*
 
       //The double for loops to find a +b = 2020
       int a=0;
@@ -62,7 +122,12 @@
 
       }
 
+*/
 
+int result2 = findProduct2(array);
+printf("The product for two numbers is: %d\n",result2);
+int result3 = findProduct3(array);
+printf("The product for three numbers is: %d\n",result3);
 
 fclose(fp);
 
@@ -77,6 +142,6 @@ fclose(fp);
 
 
 
-    printf("neger");
+    printf("nege");
 
     }

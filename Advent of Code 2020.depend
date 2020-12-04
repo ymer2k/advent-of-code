@@ -1,6 +1,10 @@
 # depslib dependency file v1.0
-1606996897 source:c:\users\jonas\cprojects\advent-of-code-2020\src\2020-01-1.c
+1607028287 source:c:\users\jonas\cprojects\advent-of-code-2020\src\2020-01-1.c
 	<stdio.h>
 	<stdlib.h>
 	<errno.h>
+
+1607035731 source:c:\users\jonas\cprojects\advent-of-code-2020\src\2020-02-1.c
+	<stdio.h>
+	<stdlib.h>
 
