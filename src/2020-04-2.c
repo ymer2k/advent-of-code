@@ -293,11 +293,10 @@ int pid_invalidity_check(char dataStr[])
     {
         return 0;
     }
-    char legalChars[11] = "0123456789";
-    //printf("%legalChars length:%d",strlen(legalChars)); //bug, it says its bigger than it really is
+    char legalChars[] = "0123456789";
     for(int index=0; index < strlen(dataStr)-1 ; index++) // -1 because of \n
     {
-        for(int index2=0; index2 < 10; index2++)
+        for(int index2=0; index2 < strlen(legalChars); index2++)
         {
             if(dataStr[index] == legalChars[index2])
             {
