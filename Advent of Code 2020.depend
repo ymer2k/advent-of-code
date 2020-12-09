@@ -16,8 +16,14 @@
 	<stdio.h>
 	<stdlib.h>
 
-1607534118 source:c:\users\jonas\cprojects\advent-of-code-2020\src\2020-04-2.c
+1607545091 source:c:\users\jonas\cprojects\advent-of-code-2020\src\2020-04-2.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+
+1607557706 source:c:\users\jonas\cprojects\advent-of-code-2020\src\2020-05-1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
 
