@@ -40,27 +40,25 @@ int main(void)
         }
 
         for(int index=0; index < strlen(questionListModifiable); index++)
+        {
+            if(strchr(str,questionListModifiable[index])) //if the specific yes answered question is within the str string.
             {
-                if(strchr(str,questionListModifiable[index])) //if the specific yes answered question is within the str string.
-                {
-                    questionListModifiable[index] = '0'; // modify the question list to remove the questions this group already answered yes to
-                    yesQuestionCoutner++;
-                }
-
-                if(yesQuestionCoutner == strlen(str)) //This unfortunately does not work for groups that answered yes on the same questions...
-                //Should be changed so it does not continue looping until the end.
-                {
-                    break;
-                }
+                questionListModifiable[index] = '0'; // modify the question list to remove the questions this group already answered yes to
+                yesQuestionCoutner++;
             }
-            groupSumCount += yesQuestionCoutner; // add this passangers yes answers to the groups count.
-            yesQuestionCoutner = 0; //reset the counter for this passanger
+
+            if(yesQuestionCoutner == strlen(str)) //This unfortunately does not work for groups that answered yes on the same questions...
+                //Should be changed so it does not continue looping until the end.
+            {
+                break;
+            }
+        }
+        groupSumCount += yesQuestionCoutner; // add this passangers yes answers to the groups count.
+        yesQuestionCoutner = 0; //reset the counter for this passanger
     }
 
     //Have to do this after we go through all data because of the edge case that the last group does not end with a new line
     totalSumCount += groupSumCount;
 
-
-
-printf("Total sum:%d\n",totalSumCount);
+    printf("Total sum:%d\n",totalSumCount);
 }
