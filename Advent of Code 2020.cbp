@@ -31,7 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="src/2020-06-2.c">
+		<Unit filename="src/2020-07-1.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/2020-01-1/2020-01-1-data.txt" />
@@ -42,6 +42,8 @@
 		<Unit filename="test/2020-05-1/2020-05-1-data.txt" />
 		<Unit filename="test/2020-06-1/2020-06-1-data-example.txt" />
 		<Unit filename="test/2020-06-1/2020-06-1-data.txt" />
+		<Unit filename="test/2020-07-1/2020-07-1-data-example.txt" />
+		<Unit filename="test/2020-07-1/2020-07-1-data.txt" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
