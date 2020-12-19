@@ -116,7 +116,7 @@ int main(void)
     int bagCounter = 0;
     char parentBagsFound[MAX_PARENT_COUNT][MAX_BAG_NAME_SIZE] = {{0}}; //an array where we store our already found parent bags
     char ourBag[] = "shiny gold";
-    bagCounter += getParentBagCount(ourBag,&parentBagsFound);
+    bagCounter += getParentBagCount(ourBag,parentBagsFound);
     printf("Total nr of parent bags:%d",bagCounter);
     return 1;
 
