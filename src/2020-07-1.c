@@ -7,6 +7,13 @@
 #define MAX_BAG_NAME_SIZE 30
 #define MAX_PARENT_COUNT 400
 
+//declare functions
+int getMainBagSeperateIndex(char line[MAX_LINE_SIZE]);
+int getArrayLength(char (*array)[MAX_BAG_NAME_SIZE]);
+char * doesBagExist(char bagContent[], char bagName[]);
+int getNewParentIndexIfNewParent(char parentBag[],char (*parentBagsFound)[MAX_BAG_NAME_SIZE]);
+
+
 FILE * getInputData(char path[])
 {
     FILE *fp = fopen(path,"r");
@@ -69,9 +76,10 @@ int getMainBagSeperateIndex(char line[MAX_LINE_SIZE])
             }
         }
     }
+    return -1;
 }
 
-int doesBagExist(char bagContent[], char bagName[])
+char * doesBagExist(char bagContent[], char bagName[])
 {
     //checks if bag is contained within the curernt bags content
     return strstr(bagContent,bagName);
@@ -107,7 +115,7 @@ int main(void)
 {
     int bagCounter = 0;
     char parentBagsFound[MAX_PARENT_COUNT][MAX_BAG_NAME_SIZE] = {{0}}; //an array where we store our already found parent bags
-    const char ourBag[] = "shiny gold";
+    char ourBag[] = "shiny gold";
     bagCounter += getParentBagCount(ourBag,&parentBagsFound);
     printf("Total nr of parent bags:%d",bagCounter);
     return 1;
