@@ -76,13 +76,12 @@ void sortArray2(char ** dataArray)
 
 void addEndAdapter(char ** dataArray, int arrayLength)
 {
-        //add the end adapter.
+    //add the end adapter.
     int lastAdapter = atoi(dataArray[arrayLength-1]);
     char line[MAX_LINE_LENGTH] = {0};
     sprintf(line, "%d", lastAdapter + 3); //Last adapter is 3 bigger than the second to last.
     strcpy(dataArray[arrayLength],line);
     dataArray[arrayLength+1][0] = '\0';
-
 }
 
 void printCombinations(char ** dataArray, int arrayLength)
@@ -99,7 +98,7 @@ void printCombinations(char ** dataArray, int arrayLength)
         printf("\n");
         printf("Current Number:%d\n",atoi(dataArray[i]));
         printf("In scope: ");
-        for(int j=1; j <= 3;j++) //loop through the closest three numbers
+        for(int j=1; j <= 3; j++) //loop through the closest three numbers
         {
             if(atoi(dataArray[i+j]) != '\0') // if we are not out of bounds.
             {
@@ -110,9 +109,17 @@ void printCombinations(char ** dataArray, int arrayLength)
                     printf(" %d,",atoi(dataArray[i+j]));
                     tempSum += multi[nextNumber];
 
-                }else{break;}
+                }
+                else
+                {
+                    break;
+                }
 
-            }else{break;}
+            }
+            else
+            {
+                break;
+            }
 
         }
         //update the multi array
@@ -136,7 +143,6 @@ void countAdapterCombinations()
     addEndAdapter(dataArray,arrayLength);
     arrayLength = getArrayLength(dataArray);
     printCombinations(dataArray,arrayLength);
-
 }
 
 int main(void)
