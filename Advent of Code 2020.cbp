@@ -31,7 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="src/2020-13-1.c">
+		<Unit filename="src/2020-13-2.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/2020-01-1/2020-01-1-data.txt" />
